@@ -12,7 +12,7 @@ RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN npm install
 COPY ./src/ /usr/src/app/server/src/
 RUN npm run compile
-ENV SERVICE_PORT 80
+ENV PORT 80
 EXPOSE 80
 
 ENTRYPOINT ["/usr/bin/nodejs"]

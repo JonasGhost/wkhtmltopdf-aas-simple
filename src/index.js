@@ -11,7 +11,7 @@ import { http } from 'http';
 import { default as express } from 'express';
 import { default as bodyparser } from 'body-parser';
 
-const PORT = process.env.SERVICE_PORT || 80;
+const PORT = process.env.PORT || 80;
 
 const app = express();
 app.use(bodyparser.json());
