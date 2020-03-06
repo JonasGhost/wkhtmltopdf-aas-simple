@@ -8,9 +8,9 @@ RUN mkdir -p /usr/src/app/server
 WORKDIR /usr/src/app/server
 
 COPY ./package.json /usr/src/app/server
+RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN npm install
 COPY ./src/ /usr/src/app/server/src/
-RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN npm run compile
 ENV SERVICE_PORT 80
 EXPOSE 80
